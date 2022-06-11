@@ -27,16 +27,20 @@ class ViewController: UIViewController {
 //            print("Error")
 //        }
         
-        switch hardness {
-            case "Soft":
-                print(softTime)
-            case "Medium":
-                print(mediumTime)
-            case "Hard":
-                print(hardTime)
-            default:
-                print("Error")
-        }
+//        switch hardness {
+//            case "Soft":
+//                print(softTime)
+//            case "Medium":
+//                print(mediumTime)
+//            case "Hard":
+//                print(hardTime)
+//            default:
+//                print("Error")
+//        }
+        
+        let eggTimes = ["Soft": 5, "Medium": 7, "Hard": 12]
+        
+        print(eggTimes[hardness!]!)
     }
     
 
