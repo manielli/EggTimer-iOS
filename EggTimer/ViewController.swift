@@ -28,8 +28,9 @@ class ViewController: UIViewController {
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
         let hardness = sender.currentTitle!
-        titleLabel.text = "How do you like your eggs?"
-
+        titleLabel.text = hardness
+        secondsPassed = 0
+        progressBar.progress = 0.0
         timer.invalidate()
 
 //        if hardness == "Soft" {
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
     @objc func updateTimer() {
         if secondsPassed < totalTime {
             secondsPassed += 1
-            progressBar.progress = Float(Float(secondsPassed)/Float(totalTime))
+            progressBar.progress = Float(secondsPassed)/Float(totalTime)
         } else {
             timer.invalidate()
             titleLabel.text = "Done!"
